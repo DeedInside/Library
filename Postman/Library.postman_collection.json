@@ -1,0 +1,391 @@
+{
+	"info": {
+		"_postman_id": "12e19887-fa70-488e-afe6-d3e7205c9970",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25557787"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "AddBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 4,\r\n        \"name\": \"name book_4\",\r\n        \"autor\": \"autor book_4\",\r\n        \"arc\": \"0123\",\r\n        \"agePublic\": 2023,\r\n        \"counBook\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5141/book/addBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"book",
+								"addBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RenameBook",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 2,\r\n        \"name\": \"name book_1\",\r\n        \"autor\": \"autor book_1\",\r\n        \"arc\": \"111111\",\r\n        \"agePublic\": 2023,\r\n        \"counBook\": 10\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5141/book/changeBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"book",
+								"changeBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveBook",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"name book_3\",\r\n        \"autor\": \"autor book_3\",\r\n        \"arc\": \"123\",\r\n        \"agePublic\": 2023,\r\n        \"counBook\": 10\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5141/book/removeBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"book",
+								"removeBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5141/book/bookId?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"book",
+								"bookId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book by name------",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5141/book/bookName?name=name book_3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"book",
+								"bookName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "name book_3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List avalibleBook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5141/book/avalibleBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"book",
+								"avalibleBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list issued Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5141/book/issuedBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"book",
+								"issuedBook"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reader",
+			"item": [
+				{
+					"name": "Add Reader",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 3,\r\n        \"name\": \"12\",\r\n        \"Family\": \"23\",\r\n        \"Patronymic\": \"34\",\r\n        \"agePublic\": 2023,\r\n        \"YearBirth\": \"0001-01-01\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5141/reader/addReader",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"reader",
+								"addReader"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get reader by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5141/reader/readerId?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"reader",
+								"readerId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rename Reader",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"reader name 1\",\r\n        \"Family\": \"Family reader 1\",\r\n        \"Patronymic\": \"Patronymic reader 1\",\r\n        \"agePublic\": 2023,\r\n        \"YearBirth\": \"0001-01-01\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5141/reader/changeReader",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"reader",
+								"changeReader"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delite reader",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5141/reader/removeReader?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"reader",
+								"removeReader"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Issue Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5141/reader/IssueBook?idbook=2&idreader=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"reader",
+								"IssueBook"
+							],
+							"query": [
+								{
+									"key": "idbook",
+									"value": "2"
+								},
+								{
+									"key": "idreader",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reader by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5141/reader/readerId?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"reader",
+								"readerId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reader find by FIO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5141/reader/readerFIO?FIO=Family reader 1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"reader",
+								"readerFIO"
+							],
+							"query": [
+								{
+									"key": "FIO",
+									"value": "Family reader 1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
